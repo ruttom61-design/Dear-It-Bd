@@ -2024,7 +2024,7 @@ async function chatPoll(){
     renderChat(true);
   } catch(e){}
 }
-try { window.__chatPollTimer = setInterval(chatPoll, 5000); } catch(e){}
+try { window.__chatPollTimer = setInterval(chatPoll, 8000); } catch(e){}
 try { document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') chatPoll(); }); } catch(e){}
 (function chatWiring(){
   const box = document.getElementById('chatBox');
@@ -2660,7 +2660,7 @@ async function syncTick(){
     }
   } catch(e){} finally { __snapBusy = false; }
 }
-window.__syncTimer = setInterval(syncTick, 3000);
+window.__syncTimer = setInterval(syncTick, 8000);
 /* the moment the visitor comes back to the tab, catch up immediately instead
    of waiting for the next tick */
 try { document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') syncTick(); }); } catch(e){}

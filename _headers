@@ -8,3 +8,7 @@
   Cache-Control: public, max-age=3600
 /customer.html
   Cache-Control: public, max-age=60
+/css/*
+  Cache-Control: public, max-age=604800
+/js/*
+  Cache-Control: public, max-age=604800

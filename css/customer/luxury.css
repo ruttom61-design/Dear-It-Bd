@@ -515,8 +515,8 @@ footer{
 }
 .footer-features .feat-ic .ic{width:22px;height:22px;fill:none!important;stroke:currentColor!important;stroke-width:2!important;stroke-linecap:round!important;stroke-linejoin:round!important}
 .footer-features .feat-tx{display:flex;flex-direction:column;gap:2px;min-width:0}
-.footer-features .feat-tx b{color:#fff!important;font-family:'Plus Jakarta Sans','Anek Bangla',sans-serif!important;font-size:13.5px!important;font-weight:800!important;letter-spacing:-.01em!important;white-space:nowrap!important}
-.footer-features .feat-tx small{color:rgba(255,255,255,.6)!important;font-size:12px!important;white-space:nowrap!important;overflow:hidden;text-overflow:ellipsis}
+.footer-features .feat-tx b{color:#fff!important;font-family:'Plus Jakarta Sans','Anek Bangla',sans-serif!important;font-size:13.5px!important;font-weight:800!important;letter-spacing:-.01em!important;white-space:normal!important;overflow-wrap:anywhere;min-width:0}
+.footer-features .feat-tx small{color:rgba(255,255,255,.6)!important;font-size:12px!important;white-space:normal!important;overflow-wrap:anywhere;min-width:0}
 .footer-pays{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:18px}
 .footer-pays .pay{
   display:inline-flex;align-items:center;gap:8px;
@@ -566,14 +566,15 @@ footer{
 .footer-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;margin-bottom:24px}
 .footer-grid .footer-col ul li{color:rgba(255,255,255,.72)!important;font-size:14px!important}
 @media(max-width:900px){
-  .footer-features{grid-template-columns:repeat(2,1fr)}
-  .footer-features .feat-tx b,.footer-features .feat-tx small{white-space:normal}
+  .footer-features{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-features .feat-tx b,.footer-features .feat-tx small{white-space:normal!important;overflow-wrap:anywhere}
+  .footer-features .feat,.footer-features .feat-tx{min-width:0}
 }
 @media(max-width:560px){
-  .footer-features{grid-template-columns:1fr 1fr;gap:8px;padding:14px 0 16px}
-  .footer-features .feat{padding:8px 10px;gap:9px}
-  .footer-features .feat-ic{width:38px;height:38px;border-radius:11px}
-  .footer-grid{grid-template-columns:1fr;gap:18px}
+  .footer-features{gap:7px;padding:11px 0 13px}
+  .footer-features .feat{padding:7px 7px;gap:7px;min-width:0;overflow:hidden}
+  .footer-features .feat-ic{width:30px;height:30px;border-radius:9px}
+  .footer-grid{gap:14px}
 }
 
 /* ---------- Banner, toast, fab ---------- */
@@ -589,9 +590,30 @@ footer{
   .section-head h2{font-size:18px!important}
   .product-body h3{font-size:13.5px!important}
   .price-new{font-size:15.5px!important}
-  .footer-inner{padding:36px 16px 24px}
-  .footer-brand{font-size:22px!important}
+  .footer-inner{padding:22px 14px 18px}
+  .footer-brand{font-size:20px!important;margin-bottom:4px!important}
+  .footer-tagline{font-size:13px!important;margin-bottom:8px!important}
+  .footer-features{gap:7px;margin:4px 0 16px;padding:11px 0 13px;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .footer-features .feat{padding:7px 7px;gap:7px;min-width:0;overflow:hidden;align-items:center}
+  .footer-features .feat-ic{width:30px;height:30px;border-radius:9px;flex-shrink:0}
+  .footer-features .feat-ic .ic{width:16px;height:16px}
+  .footer-features .feat-tx{min-width:0;gap:1px}
+  .footer-features .feat-tx b{font-size:11.5px!important;white-space:normal!important;line-height:1.25;overflow-wrap:anywhere}
+  .footer-features .feat-tx small{font-size:10px!important;white-space:normal!important;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.3}
+  .footer-pays{gap:6px;margin-bottom:12px}
+  .footer-pays .pay{height:27px;padding:2px 9px 2px 3px;gap:6px;border-radius:8px}
+  .footer-pays .pay-ic{width:21px;height:21px;border-radius:6px}
+  .footer-pays .pay em{font-size:11px!important}
+  .footer-grid{gap:14px;margin-bottom:16px}
+  .footer-grid .footer-col ul li{font-size:13px!important;margin-bottom:5px!important}
+  .footer-grid .footer-col h4{margin-bottom:6px!important}
+  .footer-socials{gap:8px!important;margin-bottom:12px!important}
+  .footer-socials a{width:32px;height:32px!important}
+  .footer-bottom{font-size:11.5px!important;padding-top:12px!important;margin-top:14px!important}
   body{font-size:14.5px}
+}
+@media(max-width:360px){
+  .footer-grid{grid-template-columns:1fr}
 }
 
 /* ---------- Product popup: balanced order, qty above buttons, share below title, 1:1 image ---------- */

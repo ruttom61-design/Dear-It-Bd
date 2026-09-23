@@ -1,0 +1,5 @@
+# Netlify redirects for Customer Site
+# Root to customer.html (force: index.html exists, ! diye override)
+/    /customer.html   200!
+# Unknown paths → customer.html (unforced: css/js/file gulo load hobe)
+/*    /customer.html   200

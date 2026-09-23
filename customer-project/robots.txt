@@ -1,0 +1,14 @@
+# Robots.txt for Dear IT BD Customer Site
+# Place this in your project root and deploy
+
+User-agent: *
+Allow: /
+
+# Allow js/css for proper rendering (Google needs it)
+# Disallow private areas only
+Disallow: /*.json$
+# Product deep links are handled via sitemap - allow crawling
+# Disallow: /*?p=* removed - Google should crawl product pages
+
+# Sitemap - update with your actual domain
+Sitemap: https://shop.dearitbd.com/sitemap.xml

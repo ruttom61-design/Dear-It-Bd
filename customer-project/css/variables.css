@@ -1,0 +1,2 @@
+/* Shared design tokens */
+:root{--primary:#2A8C1A;--primary-dark:#1C6010;--primary-light:#E8F5E5;--accent:#F5A623;--accent-dark:#C8820E;--accent-light:#FFF8E8;--danger:#CC2020;--danger-light:#FDEAEA;--bg:#F7F9F7;--surface:#FFF;--text:#1A1F1A;--muted:#6B7280;--border:#E5E7EB;--radius-sm:8px;--radius-md:12px;--radius-lg:18px;--shadow-sm:0 2px 8px rgba(20,60,30,.06);--shadow-md:0 8px 24px rgba(20,60,30,.10);--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;--space-6:24px;}

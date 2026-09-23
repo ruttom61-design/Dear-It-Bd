@@ -1,0 +1,4 @@
+# Netlify redirects for Customer Site
+# Root to customer.html
+/    /customer.html   200
+/*    /customer.html   200

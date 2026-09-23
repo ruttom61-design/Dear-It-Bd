@@ -1,2 +1,0 @@
-/* Shared component hooks; page CSS retains legacy selectors for compatibility. */
-.ui-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:var(--shadow-sm)}.ui-btn{min-height:40px;border:0;border-radius:var(--radius-sm);font-weight:700}.ui-muted{color:var(--muted)}
